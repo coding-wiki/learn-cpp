@@ -1,0 +1,27 @@
+{
+  "name": "learn-cpp",
+  "version": "1.0.0",
+  "description": "Learn C++",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "node-notifier": "^5.1.2",
+    "nodemon": "^1.12.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "node scripts/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coding-wiki/learn-cpp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coding-wiki/learn-cpp/issues"
+  },
+  "homepage": "https://github.com/coding-wiki/learn-cpp#readme"
+}
