@@ -1,6 +1,6 @@
 # learn-cpp
 Learn C++
 
-## Resources
+## Resources
 - http://www.cppsamples.com/
 - https://github.com/jesyspa/linear-cpp
