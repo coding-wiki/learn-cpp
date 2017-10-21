@@ -1,8 +1,7 @@
 #include <iostream>
 #include "message.h"
 
-int main()
-{
+int main() {
   Message m;
-  m.echo("Hello world 1!")
+  m.echo();
 };

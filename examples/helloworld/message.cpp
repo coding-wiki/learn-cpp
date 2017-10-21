@@ -1,8 +1,6 @@
 #include <iostream>
-#include <string>
+#include "message.h"
 
-void Message::echo(std::string message) {
-  std::cout << message << std::endl;
+void Message::echo() {
+  std::cout << "Hello import" << std::endl;
 };
-
-

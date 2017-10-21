@@ -16,22 +16,26 @@ nodemon({
     process.stdout.write('\u001b[3J');
   }
 
-  const basePath = process.cwd();
-  const fileName = filesChanged[0].split('/').pop();
-  const filePath = filesChanged[0].split(basePath)[1];
+  const basePath = process.cwd() + '/examples/';
+  const changeDir = filesChanged[0].split(basePath)[1].split('/')[0];
 
-  const cmds = [
-    'rm -Rf build',
-    'mkdir build',
-    `g++ ${filesChanged[0]} -o ./build/${fileName}`,
-    `./build/${fileName}`
-  ].join(' && ');
+  console.log(`changeDir`,changeDir);
 
-  exec(cmds, (err, stout, stderr) => {
-    if(err) throw err;
-    console.log(`COMPILING ${filePath}\n`);
-    console.log(stout);
-  });
+  // const fileName = filesChanged[0].split('/').pop();
+  // const filePath = filesChanged[0].split(basePath)[1];
+  //
+  // const cmds = [
+  //   'rm -Rf build',
+  //   'mkdir build',
+  //   `g++ -o ./build/${fileName} ${filesChanged[0]}`,
+  //   // `./build/${fileName}`
+  // ].join(' && ');
+  //
+  // exec(cmds, (err, stout, stderr) => {
+  //   if(err) throw err;
+  //   console.log(`COMPILING ${filePath}\n`);
+  //   console.log(stout);
+  // });
 
 }).on('crash', function () {
   notifier.notify('Faild error');
