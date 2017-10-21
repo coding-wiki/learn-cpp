@@ -19,18 +19,24 @@ General Goals
 - [**Executable statements**](./) - Perform operations and execute instructions.
 ## Tmp
 
+
 ## Architecture
 When should I use a `class`?
   - Something which is a "separate" idea
+
 When should I use an `object`?
   - Something which is a "separate" entity
   - An `object` is declared inside of a `class`
+
 When should I use an `abstract class`?
   - If two classes have a common interface
+
 When should I use a `base class`?
   - A base `class` is a significant commonality in  the implementations of two classes
+
 When should I use a `template`?
   - When a `class` is a *container* of *objects*
+
 When should I use a *common namespace*?
   - When a set of classes, templates, etc are logically related
 
