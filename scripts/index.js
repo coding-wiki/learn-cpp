@@ -1,6 +1,8 @@
 const nodemon = require('nodemon');
 const notifier = require('node-notifier');
 const { exec } = require('child_process');
+const fs = require('fs')
+const path = require('path')
 
 nodemon({
   script: './scripts/_noop.js',
@@ -19,23 +21,35 @@ nodemon({
   const basePath = process.cwd() + '/examples/';
   const changeDir = filesChanged[0].split(basePath)[1].split('/')[0];
 
-  console.log(`changeDir`,changeDir);
+  let changeDirFileArray = fs.readdirSync(path.join(basePath, changeDir)).filter(file => {
+    return file.indexOf('cpp') !== -1
+  })
 
-  // const fileName = filesChanged[0].split('/').pop();
-  // const filePath = filesChanged[0].split(basePath)[1];
-  //
-  // const cmds = [
-  //   'rm -Rf build',
-  //   'mkdir build',
-  //   `g++ -o ./build/${fileName} ${filesChanged[0]}`,
-  //   // `./build/${fileName}`
-  // ].join(' && ');
-  //
-  // exec(cmds, (err, stout, stderr) => {
-  //   if(err) throw err;
-  //   console.log(`COMPILING ${filePath}\n`);
-  //   console.log(stout);
-  // });
+  changeDirFileArray = changeDirFileArray.map(file =>
+    `./examples/${changeDir}/${file}`
+  )
+
+  const implementationFiles = changeDirFileArray.join(' ')
+
+
+
+  const fileName = filesChanged[0].split('/').pop();
+  const filePath = filesChanged[0].split(basePath)[1];
+
+  console.log(`g++ -o ./build/main ${filesChanged[0]}`)
+  
+  const cmds = [
+    'rm -Rf build',
+    'mkdir build',
+    `g++ -o ./build/main ${implementationFiles}`,
+    `./build/main`,
+  ].join(' && ');
+  
+  exec(cmds, (err, stout, stderr) => {
+    if(err) throw err;
+    console.log(`COMPILING ${filePath}\n`);
+    console.log(stout);
+  });
 
 }).on('crash', function () {
   notifier.notify('Faild error');

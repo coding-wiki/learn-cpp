@@ -110,10 +110,17 @@ Learning Outcomes
 - Write small-scale C++ apps using the above skills
   - What are the applications for small C++ apps?
 
+## Functions
+Main function has to return an `int`.
+
+Functions must be declared before being used
+
+
 
 
 ## Resources
 
+- [basic programming constructs?](http://www.cs.wustl.edu/~schmidt/PDF/C++-C-portions4.pdf)
 
 
 - MIT - Introduction to C++ - 2011
