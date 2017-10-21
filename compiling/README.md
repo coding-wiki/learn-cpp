@@ -9,3 +9,8 @@ main_code_file.cpp # source code input
 
 g++ -o compiledfile folder/code.cpp
 ```
+
+Running compiled code:
+```sh
+./compiled
+```
