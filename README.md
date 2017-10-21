@@ -6,10 +6,9 @@ General Goals
 
 - [ ] Hello world
 - [ ] TDD
+- [ ] Understand import system
 - [ ] Dev Workflow - compiling
 - [ ] Distribution
-
-
 
 Learning Outcomes
 
