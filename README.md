@@ -17,6 +17,61 @@ General Goals
 - [**Comments**](./comments) - Code documentation
 - [**Function Declarations**](./functions) - Reusable pieces of code
 - [**Executable statements**](./) - Perform operations and execute instructions.
+## Learning Outcomes
+
+- Understand and use the basic *programming constructs* of C/C++
+  - What are the basic *programming constructs*?
+    - **Definition:** A programming construct is the syntax in which a programming language is written. It is often used as a reference to *control flow* or *flow control statements*
+    - *Conditional statements:* `if`, `case`, etc
+    - *Repetition:* `for` and `while` loops
+    - *Exception handling:* `try`, `catch`,
+    - *Async:*
+  - What is a *preprocessor*?
+- Manipulate various C/C++ datatypes, such as arrays, strings, and pointers
+  - Create, manipulate and use *primitive data-structures:* variables and constants: `int`, `std::string`, etc
+    - What is the best type of data-type for numbers, strings, etc? e.g. `char` vs `std::string`
+  - Create, manipulate and use *complex data-structures:* arrays, structs, unions, and enumerations
+  - How do we do *string* manipulation?
+- Create and use simple functions
+- Using **TDD** in C++
+- Isolate and debug common errors in C++ apps
+  - How can we efficiently debug?
+  - What are common errors?
+- Use memory appropriately, including proper allocation/deallocation procedures
+  - How do we allocate to memory?
+  - How do we deallocate from memory?
+- Apply object-oriented programming approaches to software problems in C++
+  - What is a class and object?
+  - What is the standard way of using classes/objects?
+  - What is a contstructor?
+- Write small-scale C++ apps using the above skills
+  - What are the applications for small C++ apps?
+
+
+
+## Applications
+
+Ref: [edX - C++ Algorithms and Data Structures](https://courses.edx.org/courses/course-v1:Microsoft+DEV285x+4T2017/course/)
+
+**Basic Algorithms**
+
+- [Selection Sort]() - 
+- [Linear Search]() - 
+- [Bubble Search]() - 
+
+**Algorithmic Analysis**
+
+- [Merge Sort]() - 
+- [Binary Search]() - 
+- [Big O]() - 
+
+**Basic Data-Structures**
+
+- [Linked Lists]()
+- [Stack]()
+- [Queue]()
+- ​
+
 ## Tmp
 
 
@@ -58,7 +113,7 @@ so duplicate `#include`s should be avoided with *include guards*
 
 *Header* files should use `.h__` which can be `.h`, `.hpp` or `.hxx`
   - `.hpp` used for inline functions?
-Anything starting with `.h` is a header file
+  Anything starting with `.h` is a header file
 
 *C++ source files* should use `.c__` extension which can be `.cpp`, `.cxx` or `.cc`
 
@@ -100,39 +155,6 @@ What does *flushing* mean?
 
 Do not define files twice
 
-
-Learning Outcomes
-
-- Understand and use the basic *programming constructs* of C/C++
-  - What are the basic *programming constructs*?
-    - **Definition:** A programming construct is the syntax in which a programming language is written. It is often used as a reference to *control flow* or *flow control statements*
-    - *Conditional statements:* `if`, `case`, etc
-    - *Repetition:* `for` and `while` loops
-    - *Exception handling:* `try`, `catch`,
-    - *Async:*
-
-  - What is a *preprocessor*?
-- Manipulate various C/C++ datatypes, such as arrays, strings, and pointers
-  - Create, manipulate and use *primitive data-structures:* variables and constants: `int`, `std::string`, etc
-    - What is the best type of data-type for numbers, strings, etc? e.g. `char` vs `std::string`
-  - Create, manipulate and use *complex data-structures:* arrays, structs, unions, and enumerations
-  - How do we do *string* manipulation?
-
-- Create and use simple functions
-- Using **TDD** in C++
-- Isolate and debug common errors in C++ apps
-  - How can we efficiently debug?
-  - What are common errors?
-- Use memory appropriately, including proper allocation/deallocation procedures
-  - How do we allocate to memory?
-  - How do we deallocate from memory?
-- Apply object-oriented programming approaches to software problems in C++
-  - What is a class and object?
-  - What is the standard way of using classes/objects?
-  - What is a contstructor?
-- Write small-scale C++ apps using the above skills
-  - What are the applications for small C++ apps?
-
 ## Functions
 Main function has to return an `int`.
 
@@ -143,7 +165,7 @@ A *primitive* datatype that reference an object.
 - To what degree is it *primitive*?
 - What is a *structure*?
   - Primitive version of a *class*?
-[Pointers - Wikiversity](https://en.wikiversity.org/wiki/C%2B%2B/Pointers)
+    [Pointers - Wikiversity](https://en.wikiversity.org/wiki/C%2B%2B/Pointers)
 
 ### Arrays
 An array is a collection of similar data types under the same name
