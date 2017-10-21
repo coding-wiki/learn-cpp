@@ -10,28 +10,32 @@ General Goals
 - [ ] Dev Workflow - compiling
 - [ ] Distribution
 
+## Contents
+- [**Declarations**](./declarations) - declaring variables and constants that will be used in your application
+- [**Assignments**](./assignments) - Assigning values to variables in the application code
+- [**Preprocessor Directives**](./preprocessor) - Instructions provided to the compiler based on the execution environment
+- [**Comments**](./comments) - Code documentation
+- [**Function Declarations**](./functions) - Reusable pieces of code
+- [**Executable statements**](./) - Perform operations and execute instructions.
 ## Tmp
-[1] When you program, you create a concrete representation of the ideas in your solution to some
-problem. Let the structure of the program reflect those ideas as directly as possible:
-[a] If you can think of ‘‘it’’ as a separate idea, make it a class.
-[b] If you can think of ‘‘it’’ as a separate entity, make it an object of some class.
-[c] If two classes have a common interface, make that interface an abstract class.
-[d] If the implementations of two classes have something significant in common, make that
-commonality a base class.
-[e] If a class is a container of objects, make it a template.
-[f] If a function implements an algorithm for a container, make it a template function implementing
-the algorithm for a family of containers.
-[g] If a set of classes, templates, etc., are logically related, place them in a common namespace.
-[2] When you define either a class that does not implement either a mathematical entity like a
-matrix or a complex number or a low-level type such as a linked list:
-[a] Don’t use global data (use members).
-[b] Don’t use global functions.
-[c] Don’t use public data members.
-[d] Don’t use friends, except to avoid [a] or [c].
-[e] Don’t put a ‘‘type field’’ in a class; use virtual functions.
-[f] Don’t use inline functions, except as a significant optimization.
+
+## Architecture
+When should I use a `class`?
+  - Something which is a "separate" idea
+When should I use an `object`?
+  - Something which is a "separate" entity
+  - An `object` is declared inside of a `class`
+When should I use an `abstract class`?
+  - If two classes have a common interface
+When should I use a `base class`?
+  - A base `class` is a significant commonality in  the implementations of two classes
+When should I use a `template`?
+  - When a `class` is a *container* of *objects*
+When should I use a *common namespace*?
+  - When a set of classes, templates, etc are logically related
 
 
+## Modularising Code into Files
 Each source file is compiled separately from other source files. `.cpp` files are clueless to what is happening in other `.cpp` files
 
 Headers are used to link `.cpp` files / namespaces?
@@ -42,7 +46,9 @@ Class declared in the header file?
 
 `#include` is basically a *copy/paste* operation
 
-File extensions: convention
+so duplicate `#include`s should be avoided with *include guards*
+
+### File Extensions - Convention
 
 *Header* files should use `.h__` which can be `.h`, `.hpp` or `.hxx`
   - `.hpp` used for inline functions?
@@ -56,7 +62,7 @@ Header files use preprecessor directive `#include`s and not compiled
 
 *Do not include source files*
 
-*Derived class* - an `extends`ed 
+*Derived class* - an `extends`
 
 Parent and child classes
 
@@ -91,11 +97,22 @@ Do not define files twice
 
 Learning Outcomes
 
-- Understand and use the basic programming constructs of C/C++
-  - What are the basic programming constructs
+- Understand and use the basic *programming constructs* of C/C++
+  - What are the basic *programming constructs*?
+    - **Definition:** A programming construct is the syntax in which a programming language is written. It is often used as a reference to *control flow* or *flow control statements*
+    - *Conditional statements:* `if`, `case`, etc
+    - *Repetition:* `for` and `while` loops
+    - *Exception handling:* `try`, `catch`,
+    - *Async:*
+
   - What is a *preprocessor*?
 - Manipulate various C/C++ datatypes, such as arrays, strings, and pointers
-  - What are the C/C++ datatypes and how do we manipulate them?
+  - Create, manipulate and use *primitive data-structures:* variables and constants: `int`, `std::string`, etc
+    - What is the best type of data-type for numbers, strings, etc? e.g. `char` vs `std::string`
+  - Create, manipulate and use *complex data-structures:* arrays, structs, unions, and enumerations
+  - How do we do *string* manipulation?
+
+- Create and use simple functions
 - Using **TDD** in C++
 - Isolate and debug common errors in C++ apps
   - How can we efficiently debug?
@@ -115,12 +132,48 @@ Main function has to return an `int`.
 
 Functions must be declared before being used
 
+## Pointers
+A *primitive* datatype that reference an object.
+- To what degree is it *primitive*?
+- What is a *structure*?
+  - Primitive version of a *class*?
+[Pointers - Wikiversity](https://en.wikiversity.org/wiki/C%2B%2B/Pointers)
+
+### Arrays
+An array is a collection of similar data types under the same name
+Syntax:
+
+```cpp
+int arr[25];
+// Where 25 is the length/size of the array
+```
+
+Although arr behaves as a pointer, its value cannot be changed as it references a specific region in memory.
 
 
+### Allocating variables
+The new operator allocates an object from the `memory?` heap and `optionally initializes?` it
+
+When you have finished using an object/variable, you must delete it. Otherwise, the pointed memory will be inaccessible and the result is a memory leak.
+
+### Referencing variables
+The *&* operator is used to *reference?* an object. Using the *&* operator, you can get a pointer to the object. This new pointer can be used as a function parameter or be *assigned to a variable?*.
+
+### Multidimensional Array
+- How can you implement a map with an array?
+
+
+### LinkedList
+Linear data structure where each element is a separate object, with *chaotic* memory locations
+https://www.youtube.com/watch?v=vcQIFT79_50
+
+Primitive array implementation?
 
 ## Resources
 
+- http://www.stroustrup.com/C++.html
 - [basic programming constructs?](http://www.cs.wustl.edu/~schmidt/PDF/C++-C-portions4.pdf)
+- [Introduction to C++ Syllabus](https://d37djvu3ytnwxt.cloudfront.net/assets/courseware/v1/61b41fca32ac19441fc06b34c87e40c0/asset-v1:Microsoft+DEV210x+4T2017+type@asset+block/Introduction_to_C___Syllabus.pdf)
 
 
 - MIT - Introduction to C++ - 2011
