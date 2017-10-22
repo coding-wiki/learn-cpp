@@ -26,7 +26,7 @@ General Goals
     - *Repetition:* `for` and `while` loops
     - *Exception handling:* `try`, `catch`,
     - *Async:*
-  - What is a *preprocessor*?
+  - [What is a *preprocessor*?](./preprocessor)
 - Manipulate various C/C++ datatypes, such as arrays, strings, and pointers
   - Create, manipulate and use *primitive data-structures:* variables and constants: `int`, `std::string`, etc
     - What is the best type of data-type for numbers, strings, etc? e.g. `char` vs `std::string`
@@ -72,7 +72,6 @@ Ref: [edX - C++ Algorithms and Data Structures](https://courses.edx.org/courses/
 - [Queue]()
 - ​
 
-## Tmp
 
 
 ## Architecture
@@ -99,21 +98,19 @@ When should I use a *common namespace*?
 ## Modularising Code into Files
 Each source file is compiled separately from other source files. `.cpp` files are clueless to what is happening in other `.cpp` files
 
-Headers are used to link `.cpp` files / namespaces?
+**Headers** are used to link `.cpp` files by making the *interface* visible to other `.cpp` files
 
-Header files: make the *interface* visible to other `.cpp` files
-
-Class declared in the header file?
+Classes are declared in the header file?
 
 `#include` is basically a *copy/paste* operation
 
-so duplicate `#include`s should be avoided with *include guards*
+- so duplicate `#include`s should be avoided with *include guards*
 
 ### File Extensions - Convention
 
 *Header* files should use `.h__` which can be `.h`, `.hpp` or `.hxx`
   - `.hpp` used for inline functions?
-  Anything starting with `.h` is a header file
+      Anything starting with `.h` is a header file
 
 *C++ source files* should use `.c__` extension which can be `.cpp`, `.cxx` or `.cc`
 
@@ -121,7 +118,7 @@ so duplicate `#include`s should be avoided with *include guards*
 
 Header files use preprecessor directive `#include`s and not compiled
 
-*Do not include source files*
+*Do not include source/implementation files*
 
 *Derived class* - an `extends`
 
@@ -153,7 +150,7 @@ What does *flushing* mean?
 
 ## Guards
 
-Do not define files twice
+Do not define files twice, or import the same thing multiple times
 
 ## Functions
 Main function has to return an `int`.
@@ -211,6 +208,7 @@ Primitive array implementation?
 - http://www.cppsamples.com/
 - https://github.com/jesyspa/linear-cpp
 - http://en.cppreference.com/w
+- https://medium.com/@vardanator/why-cs-students-must-learn-c-as-their-main-programming-language-6d3b4f8720bd
 
 Cool stuff
 - https://opencv.org/
