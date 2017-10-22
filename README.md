@@ -72,7 +72,6 @@ Ref: [edX - C++ Algorithms and Data Structures](https://courses.edx.org/courses/
 - [Linked Lists]()
 - [Stack]()
 - [Queue]()
-- ​
 
 
 
@@ -143,14 +142,14 @@ What is *instantiate*?
 
 How and what is injecting a function with `inline`
 
-## IOStream
+## IOStream
 **std::endl** - Inserts a newline character and flushes the output sequence
 What does *flushing* mean?
 
 **std::cout** - Standard character output
 
 
-## Guards
+## Guards
 
 Do not define files twice, or import the same thing multiple times
 
@@ -190,7 +189,7 @@ The *&* operator is used to *reference?* an object. Using the *&* operator, you 
 - How can you implement a map with an array?
 
 
-### LinkedList
+### LinkedList
 Linear data structure where each element is a separate object, with *chaotic* memory locations
 https://www.youtube.com/watch?v=vcQIFT79_50
 
