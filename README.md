@@ -33,6 +33,8 @@ General Goals
   - Create, manipulate and use *complex data-structures:* arrays, structs, unions, and enumerations
   - How do we do *string* manipulation?
 - Create and use simple functions
+- Be able to manage external dependencies in an elegant fashion
+  - [Conan - C++ Package Manager](https://conan.io/)
 - Using **TDD** in C++
 - Isolate and debug common errors in C++ apps
   - How can we efficiently debug?
