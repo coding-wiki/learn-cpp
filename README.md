@@ -153,6 +153,9 @@ What does *flushing* mean?
 
 Do not define files twice, or import the same thing multiple times
 
+## Namespace
+`std::cout` becomes `cout`...
+
 ## Functions
 Main function has to return an `int`.
 
@@ -210,6 +213,12 @@ Primitive array implementation?
 - https://github.com/jesyspa/linear-cpp
 - http://en.cppreference.com/w
 - https://medium.com/@vardanator/why-cs-students-must-learn-c-as-their-main-programming-language-6d3b4f8720bd
+
+- https://github.com/jwasham/practice-cpp
+
+[C++ Programming in 1 Hour](https://www.youtube.com/watch?v=Rub-JsjMhWY)
+
+Cool site: https://www.codesdope.com/cpp-lets-start/
 
 Cool stuff
 - https://opencv.org/
