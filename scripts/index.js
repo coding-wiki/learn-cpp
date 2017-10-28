@@ -21,30 +21,22 @@ nodemon({
   const basePath = process.cwd() + '/examples/';
   const changeDir = filesChanged[0].split(basePath)[1].split('/')[0];
 
-  let changeDirFileArray = fs.readdirSync(path.join(basePath, changeDir)).filter(file => {
+  let implementationFiles = fs.readdirSync(path.join(basePath, changeDir)).filter(file => {
     return file.indexOf('cpp') !== -1
-  })
-
-  changeDirFileArray = changeDirFileArray.map(file =>
+  }).map(file =>
     `./examples/${changeDir}/${file}`
-  )
-
-  const implementationFiles = changeDirFileArray.join(' ')
-
-
+  ).join(' ');
 
   const fileName = filesChanged[0].split('/').pop();
   const filePath = filesChanged[0].split(basePath)[1];
 
-  console.log(`g++ -o ./build/main ${filesChanged[0]}`)
-  
   const cmds = [
     'rm -Rf build',
     'mkdir build',
     `g++ -o ./build/main ${implementationFiles}`,
     `./build/main`,
   ].join(' && ');
-  
+
   exec(cmds, (err, stout, stderr) => {
     if(err) throw err;
     console.log(`COMPILING ${filePath}\n`);

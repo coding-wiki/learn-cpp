@@ -57,15 +57,15 @@ Ref: [edX - C++ Algorithms and Data Structures](https://courses.edx.org/courses/
 
 **Basic Algorithms**
 
-- [Selection Sort]() - 
-- [Linear Search]() - 
-- [Bubble Search]() - 
+- [Selection Sort]() -
+- [Linear Search]() -
+- [Bubble Search]() -
 
 **Algorithmic Analysis**
 
-- [Merge Sort]() - 
-- [Binary Search]() - 
-- [Big O]() - 
+- [Merge Sort]() -
+- [Binary Search]() -
+- [Big O]() -
 
 **Basic Data-Structures**
 
@@ -134,7 +134,7 @@ What is the difference between using an object as a paramater or as say a variab
 Pointer, return type or parameter should use a forward declare?
 
 How to `extend` a class:
-`class ChildClass : public Parent` - 
+`class ChildClass : public Parent` -
 
 Main header file with all imports? https://github.com/oitofelix/mininim/blob/master/src/mininim.h
 
